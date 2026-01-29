@@ -103,11 +103,7 @@ Mamatha K
 GitHub: https://github.com/kmamatha196k
 
 ---
-## 🚀 Live Demo
 
-https://pastebin-lite-pied-theta.vercel.app
-
----
 
 
   
