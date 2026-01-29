@@ -8,7 +8,7 @@ This project allows users to create text pastes and retrieve them using a unique
 
 ## 🚀 Live Demo
 
-- **Deployed URL:** https://YOUR-VERCEL-URL.vercel.app  
+- **Deployed URL**: https://pastebin-lite-pied-theta.vercel.app
 - **Paste Page Example:** `/paste/11`  
 - **API Example:** `/api/pastes/11`
 
