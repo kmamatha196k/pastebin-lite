@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Pastebin Lite – Aganitha Solutions Take-Home Assignment
 
-## Getting Started
+A minimal Pastebin-like web application built as part of the **Aganitha Solutions** take-home assignment.
 
-First, run the development server:
+This project allows users to create text pastes and retrieve them using a unique numeric ID via both a UI page and REST API endpoints.
 
-```bash
+---
+
+## 🚀 Live Demo
+
+- **Deployed URL:** https://YOUR-VERCEL-URL.vercel.app  
+- **Paste Page Example:** `/paste/11`  
+- **API Example:** `/api/pastes/11`
+
+---
+
+## ✨ Features
+
+- Create and store text pastes
+- Auto-generated numeric paste IDs
+- Retrieve paste by ID
+- REST API support
+- PostgreSQL database integration
+- Error handling for invalid and missing IDs
+- Built using Next.js App Router
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** Next.js 14, React, TypeScript  
+- **Backend:** Next.js API Routes  
+- **Database:** PostgreSQL (Neon)  
+- **DB Client:** pg  
+- **Deployment:** Vercel  
+- **Version Control:** GitHub  
+
+---
+## 📁 Project Structure
+
+app/
+├─ api/
+│ └─ pastes/
+│ ├─ route.ts # POST: create paste
+│ └─ [id]/route.ts # GET: fetch paste by ID
+├─ paste/
+│ └─ [id]/page.tsx # UI page to display paste
+├─ layout.tsx
+└─ page.tsx
+lib/
+└─ db.ts # PostgreSQL connection
+
+POST /api/pastes
+
+
+**Request Body**
+```json
+{
+  "content": "Hello from Pastebin Lite"
+}
+
+
+📄 Fetch Paste by ID
+GET /api/pastes/{id}
+Successful Response
+
+{
+  "id": 11,
+  "content": "Hello from Pastebin Lite"
+}
+
+⚠️ Error Handling
+
+Invalid ID
+
+{ "error": "Invalid id" }
+
+
+Paste Not Found
+
+{ "error": "Paste not found" }
+
+🧪 Run Locally
+git clone https://github.com/<your-username>/pastebin-lite.git
+cd pastebin-lite
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open in browser:
+http://localhost:3000
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🔐 Environment Variables
+Create a .env file in the root directory:
+DATABASE_URL=your_postgresql_connection_string
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+✅ Assignment Completion Status
+All requirements specified in the Aganitha Solutions take-home assignment have been successfully implemented and tested.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+👩‍💻 Author
+Mamatha K
+GitHub: https://github.com/kmamatha196k
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
+## 🚀 Live Demo
 
-## Deploy on Vercel
+https://pastebin-lite-pied-theta.vercel.app
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+  
